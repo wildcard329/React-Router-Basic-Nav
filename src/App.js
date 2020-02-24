@@ -6,11 +6,12 @@ import { Home, About, Contact, Navigation } from './components';
 const App = () => (
   <div>
     <Navigation />
-    <Home exact path='/' component={Home} />
-    <About path='/about' component={About} />
-    <Contact path='/contact' component={Contact} />
+    <Route exact path='/' component={Home} />
+    <Route path='/about' component={About} />
+    <Route path='/contact' component={Contact} />
   </div>
 );
 
 export default App;
 // Could have also done this via the Route component, but chose this method for neatness
+// Mounted components, home uses exact prop due to the fact that it will show up with every other component otherwise
